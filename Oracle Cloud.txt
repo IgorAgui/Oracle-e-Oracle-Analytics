@@ -1,0 +1,144 @@
+Configurando o Ambiente em três etapas:
+
+1- CONFIGURAÇÃO DE UMA STACK:
+
+2- CONFIGURAÇÃO DO SERVIDOR DE DS:
+
+3- CONFIGURAÇÃO DE UM NOTEBOOK:
+
+1- Developer Services
+Stack
+create stack
+template/
+select template
+ service
+  data science
+select templete
+
+
+name = Análise de dados de saúde
+description = análise de dados
+next
+
+Network Configuration
+next
+
+create
+
+Criado Nova Stack
+apply
+ apply
+
+______________________________________________________
+2- Menu
+Analytics & Ai
+ Machine Learning
+  Data Science
+
+Create project
+
+name- análise de dados da saúde
+description - análise de dados
+ create
+
+______________________________________________________
+3- Na mesma Tela / Análise de dados da saúde
+
+create notebook session
+name - notebook de análise de dados
+Compute shape - Posso selecionar na nuvem diferentes maquinas do que eu preciso
+ select
+	Intel/Padrao
+		VM STANDART 1
+			SELECT
+
+Block Storage suze (in gb) / Quanto de espaço eu vou alocar pra esse maquina / Minimo 50gb
+50
+
+Voce se lembra que quando a gente configurou uma stack criamos uma rede e uma sub rede
+entao tenho que selecionar aquela rede que configurei agora no meu caso é a
+Networking resources
+VCN in demoth5 (root)
+	Data Science VCN
+Subnet in demoth5 (root)
+	Data Science - Private
+create / demora um pouco
+
+_______________________________________
+Open - demora um pouco na primeira vez
+login denovo
+
+Explorando os ambientes
+Launcher
+Environment Explores - demora um pouquinho
+	Melhor Para Nosso curso
+		Data Exploration and Manipulation for CPU Python 3.7
+Install
+Copy and execute the following command in a terminal window
+Copia a primeira linha
+
+File - Superior Esquerdo
+New
+	Terminal
+CTRL - V + Enter
+version number 3 - Yes
+
+Launcher
+	Kernels
+		Data Exploration - agr tem / se não aparecer basta esperar um pouco
+Data Exploration /...
+untitiled.ipynb
+direito - rename - Análise de dados
+import pandas as pd
+	criar uma celula = esc  + b
+	rodar uma celula = ctrl + b
+pandas.__version__
+1.3.4
+import ads
+ads.__version__
+2.5.4
+
+Fizemos todas as configurações necessárias, agora podemos começar a atacar o problema, mas vamos fazer isso nos próximos passos.
+
+_____________________________________________________________________________________________________________________________________________
+
+Arquivos Externos- Conjunto de dados Regressão logística para predizer doenças cardíacas
+
+kaggle / Voltado para ciencias de dados
+
+Para Importar é simples 1 e 2
+1- Arrastar o arquivo do seu pc para a nuvem
+2- Embaixo de run Import e importar o arquivo
+
+_____________________________________________________________________________
+
+ADS SDK KIT DE DESENVOLVIMENTO PADRÃO
+import ads
+from ads.dataset.factory import DatasetFactory
+
+DatasetFactory.open('new.csv')
+ds = DatasetFactory.open('new.csv')
+
+_____________________________________________________________
+DEPOIS DE FECHADO TUDO PARA VOLTAR
+MENU
+ ANALYTICS & AU
+	MACHINE LEARNING
+	 DATA SCIENCE
+análise da dados da saúde
+ click on name in blue Notebook de analise de dados
+	Notebook de analise de dados
+		Deactivate / quando ativo estara sujeito a cobranças
+
+
+
+
+
+	
+
+
+
+
+
+
+

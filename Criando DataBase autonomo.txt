@@ -1,0 +1,71 @@
+Menu
+Oracle DATABASE
+	Autonomous Database
+Create Autonomous Database
+Display name
+ Banco de dados do curso ads (random)
+Database name
+ dbads
+
+Choose a workload type
+Data Warehouse
+
+Choose a deployment type
+Shared Infrastructure
+
+Configure the database / Aki é o pulo do gato
+
+Always Free / Deixar marcado
+
+...
+
+Create administrator credentials
+Username
+ADMIN (RANDOM)
+Password
+Click Right Bottom (Sugerir senha forte)
+copy password
+
+Choose network access
+Access Type
+ Secure access from everywhere
+
+Choose a license type
+ License Included
+
+Provide contacts for operational notifications and announcements
+Contact Email
+... + Add contact
+
+Create Autonomous Database
+
+________________________________________________________________________________________________________________________________
+ Transferindo Database
+Database Actions / Demoro um pouco
+
+Ferramentas de dados
+ Carga de dados
+
+CARREGAR DADOS
+ARQUIVO LOCAL
+Próximo
+
+Dentro do Menu Superior click Início>
+Executar 
+
+OLHAR OS DADOS
+canto superior direito TOUR
+
+Se abrir o arquivo clicar um concluido
+
+_________________________________________________________
+ Desenvolvimento
+SQL Click
+
+
+
+
+
+
+
+

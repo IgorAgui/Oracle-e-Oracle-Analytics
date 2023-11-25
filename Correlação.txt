@@ -1,0 +1,11 @@
+Coeficiente de Correlação de Pearson
+Também conhecido como "ρ de Pearson" esse coeficiente mensura o quão duas variáveis contínuas são correlacionadas. Ele pode varia de -1 a 1, sendo que esses valores indicam:
+
+Valores de 0 a -0.3 ou 0 a 0.3: correlação irrelevante;
+Valores de -0.3 a -0.5 ou 0.3 a 0.5: correlação fraca;
+Valores de -0.5 a -0.7 ou 0.5 a 0.7: correlação moderada;
+Valores de -0.7 a -0.9 ou 0.7 a 0.9: correlação forte;
+Valores de -0.9 a -1 ou 0.9 a 1: correlação muito forte.
+Para medir o grau de correlação de variáveis que não são contínuas existem outros coeficientes de correlação que podem ser utilizados, como o de Spearman, Kendall, dentre outros. Se quiser conhecer um pouco mais sobre esses outros métodos, sugerimos a leitura do artigo
+
+https://medium.com/brdata/correla%C3%A7%C3%A3o-direto-ao-ponto-9ec1d48735fb
