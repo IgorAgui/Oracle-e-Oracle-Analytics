@@ -1,0 +1,117 @@
+O campo realmente importante que precisamos dar atenção é o terceiro, chamado "Compute shape", que por padrão ele vem com uma VM.Standard2.1, que poderíamos trabalhar com ela, mas vamos ter uma performance melhor, nossos modelos vão ser treinados de maneira mais rápida se optarmos por outra, a ideal nessa etapa de exploração, onde queremos encontrar diversos modelos, treinar diversas vezes, queremos fazer isso com agilidade.
+Para mudar esse "Compute shape" podemos clicar no botão "Select", que tem nesse terceiro campo aqui, ele vai abrir uma nova tela, fornecer diversos shapes, ele informa se queremos trocar de AMD para Intel, não há necessidade, podemos deixar o default de Intel, e descendo um pouco a tela vamos encontrar uma tabela com diversos shapes da nossas VMs, das nossas Virtuais Machine. Como eu comentei, por padrão ele vem com a 2.1, mas podemos selecionar a terceira, que é a VM.Standard2.4.
+
+
+Extensions
+
+Environment Explorer
+	General Machine Learning for CPUs on Python 3.7
+copy firts line
+
+File
+New
+ Terminal
+ CTRL+V  ENTER
+	  ENTER
+
+Criando Notebook
+File
+New 
+Notebook
+select kernel for: "Untitled.ipynb"
+	Python[conda env:general_p37_cpu_v1]
+select
+Cando superior mostra se estamos no kernal correto
+
+________________________________________________________________________________________________________
+
+Esse gráfico é conhecido como Matriz de Confusão e vai contar novas fases do nosso problema, onde nosso modelo está acertando onde está errando, vamos conseguir enxergar melhor isso. Esse gráfico é composto no eixo Y por duas labels, que é o 1 e o 0, e ele chama isso de True Label, que é os valores reais, se o paciente teve realmente a doença ou não. No eixo X, temos o 0 e 1 novamente, só que agora é o Predicted Label, é como o nosso classificador classificou aquele paciente, se ele disse que aquele paciente teria ou não a doença.
+Para fazermos a leitura desse gráfico, vamos olhar para o primeiro quadrado. Esse quadrado é composto de quatro quadrados, então o primeiro no canto superior esquerdo estamos com o número 291, isso está indicando que o nosso modelo previu que 291 pessoas não teriam a doença DAC e que elas realmente não tinham a doença, então ele acertou. O próximo quadrado que podemos prestar atenção é no canto inferior direito, que tem o número 334, e ele diz respeito das classificações que o nosso modelo diz que a pessoa teria a doença e ela realmente teve a doença. Esses são os que ele acertou.
+Olhando com o aspecto de onde ele errou, olhamos primeiro para o quadrado no canto superior direito, que tem o número 69, e esse número diz que o nosso modelo para 69 pacientes ele classificou que a pessoa teria a doença, mas, na verdade, essa pessoa não tem a doença, ele errou. E continuando nessa diagonal do erro, podemos olhar para o quadrado inferior esquerdo, onde temos dois pacientes que ele classificou que a pessoa não teria a doença e, na verdade, ela teve a doença.
+
+________________________________________________________________
+PDP (Partial Dependence Plot)
+Analisar a interação entre a resposta alvo (variável target) e uma ou mais features.
+
+_________________________________________________________________
+
+Criando Chave Modelo/Model
+OracleADS_ML
+
+profile
+ primeira opção click name/email - user
+
+Final da pagina canto esquerdo
+ Resources
+	API Keys
+Add API Key
+Download private key
+Depois de feito o download
+ADD
+Click em Copy
+
+File
+New
+Terminal
+mkdir .oci  ENTER
+vim .oci/config ENTER
+Entrando no modo de edição de arquivo
+Aperta I para começar a editar conteudo dos arquivos
+Tem q aparecer --INSERT-- Final da tela
+CTRV  +  V ENTER/OBS
+Upload Files
+Faz upload da chave
+Depois Copia o Caminha copy/Patch
+Apaga ate ficar a linha 
+	Key_file= CTRL + V 
+ESC    (PARA SALVAR O ARQUIVO)
+
+Depois aperta ( :wq  )   ENTER
+exit
+
+
+Projetos
+ Resources 
+  Models
+   Catalago Salvo de Modelo
+
+______________________________________________________________________________________
+
+Para saber mais: utilizando variáveis de ambiente
+
+Quando salvamos o artefato no catálogo, omitimos alguns parâmetros para, assim, utilizar o padrão. Mas é importante saber como obter essas informações.
+
+O método save do ADSModel, por exemplo, utiliza as informações de ID de projeto e ID de compartimento. Por padrão, ele utiliza os valores do seu arquivo config, mas você poderia, por exemplo, precisar colocar seu modelo em um projeto diferente. Uma das maneiras de descobrir essas informações é utilizando as variáveis de ambiente.
+
+Variáveis de ambiente são uma funcionalidade do sistema operacional que nos permite salvar informações como números de identificação, caminhos de arquivo e até senhas. Esse recurso é muito interessante, pois qualquer programa que precise de alguma informação e tenha conhecimento da chave ou nome da variável pode fazer essa solicitação para o sistema operacional e ele vai retornar o valor.
+
+Vamos para alguns exemplos:
+
+Podemos encontrar o ID do nosso projeto através da chave “PROJECT_OCID”, ou também o ID do compartimento através da chave “NB_SESSION_COMPARTMENT_OCID”. Para requisitar essa informação do OS devemos importar a biblioteca os
+
+	import os
+
+Depois, podemos acessar o método environ e passar como parâmetro a chave da informação.
+
+	os.environ["NB_SESSION_COMPARTMENT_OCID"]
+
+Podemos imprimir esses valores:
+
+	print(os.environ["NB_SESSION_COMPARTMENT_OCID"])
+	print(os.environ["PROJECT_OCID"])
+
+Pronto, agora você consegue acessar as informações do ambiente cloud e utilizar os parâmetros de configurações de diversas funções.
+
+____________________________________________________________________________________________________________________________________________
+
+API
+ Model deployments
+
+
+
+
+
+
+
+
+
